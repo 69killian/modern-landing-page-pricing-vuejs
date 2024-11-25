@@ -1,5 +1,9 @@
 <template >
-  <HelloWorld/>
+  
+  <div class="background">
+    
+    <HelloWorld/>
+  </div>
 </template>
 
 
@@ -17,5 +21,10 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+  .background {
   
+}
+
 </style>
