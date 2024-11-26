@@ -127,6 +127,7 @@ export default {
   box-sizing: border-box;
   font-family: 'Space Grotesk', sans-serif;
   background-color: #010B25;
+  overflow: hidden;
 }
 
 
@@ -168,6 +169,7 @@ export default {
   align-items: flex-start;
   gap: 30px;
   opacity: 0;
+  padding: 100px;
 }
 
 .card1, .card2, .card3 {
@@ -332,6 +334,10 @@ export default {
   border-radius: 50%; /* Forme d'ellipse */
   z-index: 0;
   opacity: 0;
+  
+  /* Limiter la taille de l'ellipse pour qu'elle ne déborde pas */
+  max-width: 100vw; /* Empêche l'ellipse de dépasser la largeur de la fenêtre */
+  max-height: 100vh; /* Empêche l'ellipse de dépasser la hauteur de la fenêtre */
 }
 
 /* Positionnement initial */
@@ -341,11 +347,15 @@ export default {
   transform: translate(-30%, -50%) rotate(235.37deg); /* Centrer et orienter */
 }
 
+/* Positionnement à gauche */
 .ellipse-left {
   top: 50%; /* Positionner en haut à gauche */
   left: -500px; /* Décaler vers la gauche */
   transform: translate(-20%, -10%) rotate(235.37deg); /* Orientation */
+  /* Empêcher le débordement latéral */
+  max-width: calc(100vw + 500px); /* Prendre en compte le décalage */
 }
+
 
 
 
@@ -436,7 +446,9 @@ export default {
 .buttons {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: -50px;
+  z-index: 10000000;
+  background: none;
 }
 
 
@@ -482,14 +494,27 @@ export default {
 
 /* Résolution 720x480 */
 @media screen and (max-width: 720px) {
+
+  * {
+    overflow: auto;
+  }
   .card1, .card3 {
-    width: 100%; /* Les cartes prennent toute la largeur */
+    width: 80% !important; /* Les cartes prennent toute la largeur */
     font-size: 12px; /* Réduire encore la taille du texte */
     padding: 20px; /* Réduire l'espacement interne des cartes */
   }
 
+
+  .button-clicked {
+    font-size: 12px;
+  }
+
+  .button-unclicked {
+    font-size: 12px;
+  }
+
   .card2 {
-    width: 120%;
+    width: 100% !important;
   }
   .price {
     font-size: 30px; /* Réduire la taille du prix */
