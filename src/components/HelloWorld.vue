@@ -473,10 +473,20 @@ export default {
 
 /* Résolution 1920x1080 */
 @media screen and (max-width: 1920px) {
+
+  .center-content {
+    padding: 50px;
+  }
   .ellipse {
     width: 2245px;
     height: 191px;
     filter: blur(100px);
+  }
+}
+
+@media screen and (max-width: 1473px) and (min-height: 694px) {
+  * {
+    overflow: scroll;
   }
 }
 
@@ -570,6 +580,7 @@ export default {
 }
 
 @media screen and (min-width: 1310px) {
+
   
   .ellipse {
     width: 2000px;
