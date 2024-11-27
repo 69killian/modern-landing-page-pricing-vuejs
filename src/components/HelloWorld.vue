@@ -17,7 +17,7 @@
 
       <div class="flex-row-cards">
         <div class="card1">
-          <img src="../assets/icon1.png" alt="icon1">
+          <img class="icons" src="../assets/icon1.png" alt="icon1">
           <div class="card-title">Essentiel</div>
           <div class="price">
             {{ isMonthly ? '$' + price1 : '$' + price4  }}
@@ -35,7 +35,7 @@
         </div>
 
         <div class="card2">
-          <img src="../assets/icon2.png" alt="icon2">
+          <img class="icons" src="../assets/icon2.png" alt="icon2">
           <div class="title-and-offer">
             <div class="card-title">Ultime</div>
             <div class="best-offer-button">Best Offer</div>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="card3">
-          <img src="../assets/icon1.png" alt="icon1">
+          <img class="icons" src="../assets/icon1.png" alt="icon1">
           <div class="card-title">Premium</div>
           <div class="price">
             {{ isMonthly ? '$' + price3 : '$' + price6 }}
@@ -370,25 +370,6 @@ export default {
   -webkit-text-fill-color: transparent; /* Rend le fond transparent pour ne voir que le gradient */
 }
 
-.offer-button {
-  position: relative; /* Nécessaire pour que le pseudo-élément se place correctement */
-  padding: 8.25px 35.41px;
-  font-size: 14.66px;
-  font-weight: 400;
-  border: solid 1px #97BAFF66;
-  border-radius: 54px;
-  background: linear-gradient(
-    to right, 
-    rgb(136, 179, 253), /* Couleur claire à gauche */
-    rgb(79, 129, 255),  /* Couleur foncée au centre */
-    rgb(136, 179, 253), 
-    rgb(136, 179, 253)  /* Couleur claire à droite */
-  );
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  z-index: 1; /* S'assurer que le texte est au-dessus */
-  overflow: hidden; /* Masque tout dépassement du pseudo-élément */
-}
 
 
 .offer-button {
@@ -467,7 +448,7 @@ export default {
 
 
 
-
+/* Responsive design sur toutes tailles d'écran d'ordinateur */
 
 
 
@@ -484,11 +465,429 @@ export default {
   }
 }
 
+
+
+
+@media screen and (max-width: 1920px) and (min-height: 947px) {
+  * {
+
+  }
+
+  .offer-button {
+  padding: 8.25px 35.41px;
+  font-size: 12.66px;
+}
+
+  .title {
+  font-size: 35.6px;
+}
+
+
+.card-text {
+  font-size: 14.49px;
+  background: none;
+}
+
+.price {
+  font-size: 23px;
+}
+
+.subscribe-button {
+  font-size: 14.49px;
+}
+
+
+.card-title {
+  font-size: 25.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 14.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 35px;
+  width: 35px;
+}
+}
+
 @media screen and (max-width: 1473px) and (min-height: 694px) {
   * {
     overflow: scroll;
   }
+
+  .offer-button {
+  padding: 8.25px 35.41px;
+  font-size: 12.66px;
 }
+
+  .title {
+  font-size: 35.6px;
+}
+
+
+.card-text {
+  font-size: 14.49px;
+  background: none;
+}
+
+.price {
+  font-size: 23px;
+}
+
+.subscribe-button {
+  font-size: 14.49px;
+}
+
+
+.card-title {
+  font-size: 25.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 14.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 35px;
+  width: 35px;
+}
+}
+
+
+@media screen and (max-width: 1680px) and (min-height: 917px) {
+
+  .offer-button {
+  padding: 8.25px 35.41px;
+  font-size: 12.66px;
+}
+
+  .title {
+  font-size: 35.6px;
+}
+
+
+.card-text {
+  font-size: 14.49px;
+  background: none;
+}
+
+.price {
+  font-size: 23px;
+}
+
+.subscribe-button {
+  font-size: 14.49px;
+}
+
+
+.card-title {
+  font-size: 25.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 14.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 35px;
+  width: 35px;
+}
+}
+
+@media screen and (max-width: 1600px) and (min-height: 891px) {
+  * {
+    overflow: scroll;
+  }
+
+  .offer-button {
+  padding: 8.25px 35.41px;
+  font-size: 12.66px;
+}
+
+  .title {
+  font-size: 35.6px;
+}
+
+
+.card-text {
+  font-size: 14.49px;
+  background: none;
+}
+
+.price {
+  font-size: 23px;
+}
+
+.subscribe-button {
+  font-size: 14.49px;
+}
+
+
+.card-title {
+  font-size: 25.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 14.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 35px;
+  width: 35px;
+}
+
+.card1, .card3 {
+  padding: 30.81px;
+}
+
+.card2 {
+  padding: 30.81px;
+}
+}
+
+
+
+
+
+
+@media screen and (max-width: 1600px) and (min-height: 767px) {
+  * {
+    overflow: scroll;
+  }
+
+  .offer-button {
+  padding: 6.25px 30.41px;
+  font-size: 10.66px;
+  margin-top: -40px;
+}
+
+  .title {
+  font-size: 30.6px;
+}
+
+
+.card-text {
+  font-size: 12.49px;
+  background: none;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.subscribe-button {
+  font-size: 12.49px;
+}
+
+
+.card-title {
+  font-size: 20.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 10.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 32px;
+  width: 32px;
+}
+
+.card1, .card3 {
+  padding: 25.81px;
+}
+
+.card2 {
+  padding: 25.81px;
+}
+}
+
+
+
+
+@media screen and (max-width: 1366px) and (min-height: 635px) {
+  * {
+    overflow: scroll;
+  }
+
+  .offer-button {
+  padding: 6.25px 30.41px;
+  font-size: 10.66px;
+  margin-top: -40px;
+}
+
+  .title {
+  font-size: 30.6px;
+}
+
+
+.card-text {
+  font-size: 12.49px;
+  background: none;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.subscribe-button {
+  font-size: 12.49px;
+}
+
+
+.card-title {
+  font-size: 20.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 10.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 32px;
+  width: 32px;
+}
+
+.card1, .card3 {
+  padding: 25.81px;
+}
+
+.card2 {
+  padding: 25.81px;
+}
+}
+
+
+@media screen and (max-width: 1280px) and (min-height: 587px) {
+  * {
+    overflow: scroll;
+  }
+
+  .offer-button {
+  padding: 6.25px 30.41px;
+  font-size: 10.66px;
+  margin-top: -40px;
+}
+
+  .title {
+  font-size: 30.6px;
+}
+
+
+.card-text {
+  font-size: 12.49px;
+  background: none;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.subscribe-button {
+  font-size: 12.49px;
+}
+
+
+.card-title {
+  font-size: 20.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 10.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 32px;
+  width: 32px;
+}
+
+.card1, .card3 {
+  padding: 25.81px;
+}
+
+.card2 {
+  padding: 25.81px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) and (min-height: 467px) {
+  * {
+    overflow: scroll;
+  }
+
+  .offer-button {
+  padding: 6.25px 30.41px;
+  font-size: 10.66px;
+  margin-top: -40px;
+}
+
+  .title {
+  font-size: 30.6px;
+}
+
+
+.card-text {
+  font-size: 12.49px;
+  background: none;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.subscribe-button {
+  font-size: 12.49px;
+}
+
+
+.card-title {
+  font-size: 20.9px;
+  background: none;
+}
+
+.button-clicked, .button-unclicked {
+  font-size: 10.49px;
+}
+
+.card1 .icons, .card2 .icons, .card3 .icons {
+  height: 32px;
+  width: 32px;
+}
+
+.card1, .card3 {
+  padding: 25.81px;
+}
+
+.card2 {
+  padding: 25.81px;
+}
+}
+
+
+
+
+
+
+
 
 /* Résolution 1440x1024 */
 @media screen and (max-width: 1440px) {
@@ -501,6 +900,10 @@ export default {
     left: -400px; /* Ajuste le positionnement */
   }
 }
+
+
+
+
 
 /* Résolution 720x480 */
 @media screen and (max-width: 720px) {
@@ -527,24 +930,24 @@ export default {
     width: 100% !important;
   }
   .price {
-    font-size: 30px; /* Réduire la taille du prix */
+    font-size: 30px;
   }
   .month {
-    font-size: 12px; /* Ajuster la taille du texte mois */
+    font-size: 12px; 
   }
   .flex-row-cards {
-    flex-direction: column; /* Mettre les cartes en colonne */
+    flex-direction: column; 
     align-items: center;
-    gap: 20px; /* Espacement entre les cartes */
+    gap: 20px; 
   }
   .title {
-    font-size: 24px; /* Réduire la taille du titre */
+    font-size: 24px; 
   }
   .blue-title {
-    font-size: 20px; /* Réduire la taille du texte avec gradient */
+    font-size: 20px; 
   }
   .offer-button {
-    font-size: 12px; /* Réduire la taille du bouton */
+    font-size: 12px;
     margin-top: 20px;
   }
   .ellipse {
@@ -560,6 +963,11 @@ export default {
     top: 40%;
   }
 }
+
+
+
+
+
 
 /* Résolution 1787x1140 */
 @media screen and (max-width: 1787px) {
@@ -578,6 +986,10 @@ export default {
     top: 40%;
   }
 }
+
+
+
+
 
 @media screen and (min-width: 1310px) {
 
