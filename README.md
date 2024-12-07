@@ -2,7 +2,7 @@
 
 ![Capture d'écran du projet](screen.png)
 
-![Lien du site déployé](https://modern-landing-page-pricing-vuejs.vercel.app/)
+[![Lien du site déployé]()](https://modern-landing-page-pricing-vuejs.vercel.app/)
 
 
 # Spikes Design Challenge: Pricing Cards 🎨💡
@@ -40,7 +40,7 @@ Et vous, vous êtes prêt à relever ce challenge ? 💪🚀
 
 ![Project ScreenShot](screen.png)
 
-![Deployed WebSite Link](https://modern-landing-page-pricing-vuejs.vercel.app/)
+[![Deployed Web site Link]()](https://modern-landing-page-pricing-vuejs.vercel.app/)
 
 # Spikes Design Challenge: Pricing Cards 🎨💡
 
