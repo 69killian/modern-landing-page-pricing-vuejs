@@ -118,7 +118,7 @@ export default {
 
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -127,10 +127,7 @@ export default {
   box-sizing: border-box;
   font-family: 'Space Grotesk', sans-serif;
   background-color: #010B25;
-  overflow: hidden;
 }
-
-
 
 @keyframes fadeIn {
   0% {
@@ -170,6 +167,7 @@ export default {
   gap: 30px;
   opacity: 0;
   padding: 100px;
+  flex-wrap: wrap; /* Permet de faire passer les éléments sur la ligne suivante */
 }
 
 .card1, .card2, .card3 {
@@ -216,11 +214,6 @@ export default {
   align-items: center;
   gap: 15px;
 }
-
-
-
-
-
 
 .card1 .bottom-line, .card2 .bottom-line, .card3 .bottom-line {
   width: 100%; 
@@ -302,13 +295,9 @@ export default {
   box-shadow: inset 0px 0px 10px 2px #1e6ffba3; /* Ombre interne blanche au survol */
 }
 
-
-
-
 .subscribe-button {
   font-size: 18.49px;
 }
-
 
 .card-title {
   font-size: 33.9px;
@@ -356,9 +345,6 @@ export default {
   max-width: calc(100vw + 500px); /* Prendre en compte le décalage */
 }
 
-
-
-
 .title {
   font-size: 54.6px;
   font-weight: 700;
@@ -369,8 +355,6 @@ export default {
   -webkit-background-clip: text; /* Affiche le gradient uniquement sur le texte */
   -webkit-text-fill-color: transparent; /* Rend le fond transparent pour ne voir que le gradient */
 }
-
-
 
 .offer-button {
   position: relative; /* Nécessaire pour que le pseudo-élément se place correctement */
@@ -432,583 +416,61 @@ export default {
   background: none;
 }
 
+/* Responsive design */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive design sur toutes tailles d'écran d'ordinateur */
-
-
-
-/* Résolution 1920x1080 */
-@media screen and (max-width: 1920px) {
-
-  .center-content {
+@media (max-width: 1024px) {
+  .flex-row-cards {
+    flex-direction: column; /* Passe à deux colonnes sur les tablettes */
+    gap: 20px;
     padding: 50px;
   }
-  .ellipse {
-    width: 2245px;
-    height: 191px;
-    filter: blur(100px);
-  }
+
+  .title {
+  font-size: 44.6px;
 }
 
-
-
-
-@media screen and (max-width: 1920px) and (min-height: 947px) {
-  * {
-
+  .card1, .card2, .card3 {
+    width: 100%; /* Les cartes prennent toute la largeur */
+    margin-top: 120px;
   }
 
   .offer-button {
-  padding: 8.25px 35.41px;
-  font-size: 12.66px;
+  margin-top: 50px;
 }
+}
+
+@media (max-width: 768px) {
+  .flex-row-cards {
+    flex-direction: column; /* Passe à une seule colonne sur les petites tailles */
+    gap: 20px;
+    padding: 20px;
+  }
 
   .title {
-  font-size: 35.6px;
+  font-size: 34.6px;
 }
 
-
-.card-text {
-  font-size: 14.49px;
-  background: none;
-}
-
-.price {
-  font-size: 23px;
-}
-
-.subscribe-button {
-  font-size: 14.49px;
-}
-
-
-.card-title {
-  font-size: 25.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 14.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 35px;
-  width: 35px;
-}
-}
-
-@media screen and (max-width: 1473px) and (min-height: 694px) {
-  * {
-    overflow: scroll;
+  .card1, .card2, .card3 {
+    width: 100%; /* Les cartes prennent toute la largeur */
   }
-
-  .offer-button {
-  padding: 8.25px 35.41px;
-  font-size: 12.66px;
-}
-
-  .title {
-  font-size: 35.6px;
-}
-
-
-.card-text {
-  font-size: 14.49px;
-  background: none;
-}
-
-.price {
-  font-size: 23px;
-}
-
-.subscribe-button {
-  font-size: 14.49px;
-}
-
-
-.card-title {
-  font-size: 25.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 14.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 35px;
-  width: 35px;
-}
-}
-
-
-@media screen and (max-width: 1680px) and (min-height: 917px) {
-
-  .offer-button {
-  padding: 8.25px 35.41px;
-  font-size: 12.66px;
-}
-
-  .title {
-  font-size: 35.6px;
-}
-
-
-.card-text {
-  font-size: 14.49px;
-  background: none;
-}
-
-.price {
-  font-size: 23px;
-}
-
-.subscribe-button {
-  font-size: 14.49px;
-}
-
-
-.card-title {
-  font-size: 25.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 14.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 35px;
-  width: 35px;
-}
-}
-
-@media screen and (max-width: 1600px) and (min-height: 891px) {
-  * {
-    overflow: scroll;
-  }
-
-  .offer-button {
-  padding: 8.25px 35.41px;
-  font-size: 12.66px;
-}
-
-  .title {
-  font-size: 35.6px;
-}
-
-
-.card-text {
-  font-size: 14.49px;
-  background: none;
-}
-
-.price {
-  font-size: 23px;
-}
-
-.subscribe-button {
-  font-size: 14.49px;
-}
-
-
-.card-title {
-  font-size: 25.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 14.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 35px;
-  width: 35px;
-}
-
-.card1, .card3 {
-  padding: 30.81px;
-}
-
-.card2 {
-  padding: 30.81px;
-}
-}
-
-
-
-
-
-
-@media screen and (max-width: 1600px) and (min-height: 767px) {
-  * {
-    overflow: scroll;
-  }
-
-  .offer-button {
-  padding: 6.25px 30.41px;
-  font-size: 10.66px;
-  margin-top: -40px;
-}
-
-  .title {
-  font-size: 30.6px;
-}
-
-
-.card-text {
-  font-size: 12.49px;
-  background: none;
-}
-
-.price {
-  font-size: 20px;
-}
-
-.subscribe-button {
-  font-size: 12.49px;
-}
-
-
-.card-title {
-  font-size: 20.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 10.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 32px;
-  width: 32px;
-}
-
-.card1, .card3 {
-  padding: 25.81px;
-}
-
-.card2 {
-  padding: 25.81px;
-}
-}
-
-
-
-
-@media screen and (max-width: 1366px) and (min-height: 635px) {
-  * {
-    overflow: scroll;
-  }
-
-  .offer-button {
-  padding: 6.25px 30.41px;
-  font-size: 10.66px;
-  margin-top: -40px;
-}
-
-  .title {
-  font-size: 30.6px;
-}
-
-
-.card-text {
-  font-size: 12.49px;
-  background: none;
-}
-
-.price {
-  font-size: 20px;
-}
-
-.subscribe-button {
-  font-size: 12.49px;
-}
-
-
-.card-title {
-  font-size: 20.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 10.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 32px;
-  width: 32px;
-}
-
-.card1, .card3 {
-  padding: 25.81px;
-}
-
-.card2 {
-  padding: 25.81px;
-}
-}
-
-
-@media screen and (max-width: 1280px) and (min-height: 587px) {
-  * {
-    overflow: scroll;
-  }
-
-  .offer-button {
-  padding: 6.25px 30.41px;
-  font-size: 10.66px;
-  margin-top: -40px;
-}
-
-  .title {
-  font-size: 30.6px;
-}
-
-
-.card-text {
-  font-size: 12.49px;
-  background: none;
-}
-
-.price {
-  font-size: 20px;
-}
-
-.subscribe-button {
-  font-size: 12.49px;
-}
-
-
-.card-title {
-  font-size: 20.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 10.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 32px;
-  width: 32px;
-}
-
-.card1, .card3 {
-  padding: 25.81px;
-}
-
-.card2 {
-  padding: 25.81px;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 800px) and (min-height: 467px) {
-  * {
-    overflow: scroll;
-  }
-
-  .offer-button {
-  padding: 6.25px 30.41px;
-  font-size: 10.66px;
-  margin-top: -40px;
-}
-
-  .title {
-  font-size: 30.6px;
-}
-
-
-.card-text {
-  font-size: 12.49px;
-  background: none;
-}
-
-.price {
-  font-size: 20px;
-}
-
-.subscribe-button {
-  font-size: 12.49px;
-}
-
-
-.card-title {
-  font-size: 20.9px;
-  background: none;
-}
-
-.button-clicked, .button-unclicked {
-  font-size: 10.49px;
-}
-
-.card1 .icons, .card2 .icons, .card3 .icons {
-  height: 32px;
-  width: 32px;
-}
-
-.card1, .card3 {
-  padding: 25.81px;
-}
-
-.card2 {
-  padding: 25.81px;
-}
-}
-
-
-
-
-
-
-
-
-/* Résolution 1440x1024 */
-@media screen and (max-width: 1440px) {
-  .ellipse {
-    width: 1800px;
-    height: 160px;
-    filter: blur(200px);
-  }
-  .ellipse-left {
-    left: -400px; /* Ajuste le positionnement */
-  }
-}
-
-
-
-
-
-/* Résolution 720x480 */
-@media screen and (max-width: 720px) {
-
-  * {
-    overflow: auto;
-  }
-  .card1, .card3 {
-    width: 80% !important; /* Les cartes prennent toute la largeur */
-    font-size: 12px; /* Réduire encore la taille du texte */
-    padding: 20px; /* Réduire l'espacement interne des cartes */
-  }
-
 
   .button-clicked {
-    font-size: 12px;
-  }
+  padding: 10.25px 35.41px;
+  border-radius: 7.17px;
+}
 
-  .button-unclicked {
-    font-size: 12px;
-  }
+.button-unclicked {
+  border: solid 1px #FFFFFF66;
+  background: radial-gradient(circle at 50% 90%, #0a318b00, #1e6ffb00);
+  padding: 10.25px 15.41px;
+}
 
-  .card2 {
-    width: 100% !important;
-  }
-  .price {
-    font-size: 30px;
-  }
-  .month {
-    font-size: 12px; 
-  }
-  .flex-row-cards {
-    flex-direction: column; 
-    align-items: center;
-    gap: 20px; 
-  }
-  .title {
-    font-size: 24px; 
-  }
-  .blue-title {
-    font-size: 20px; 
-  }
-  .offer-button {
-    font-size: 12px;
-    margin-top: 20px;
-  }
-  .ellipse {
-    width: 1000px;
-    height: 120px;
-    filter: blur(150px);
-  }
-  .ellipse-center {
-    transform: translate(-40%, -60%) rotate(235.37deg);
-  }
-  .ellipse-left {
-    left: -200px;
-    top: 40%;
-  }
+.offer-button {
+  margin-top: 50px;
 }
 
 
-
-
-
-
-/* Résolution 1787x1140 */
-@media screen and (max-width: 1787px) {
-  .ellipse {
-    width: 1140px;
-    height: 90px;
-    filter: blur(80px);
-  }
-  .ellipse-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -60%) rotate(235.37deg);
-  }
-  .ellipse-left {
-    left: -200px;
-    top: 40%;
-  }
 }
 
-
-
-
-
-@media screen and (min-width: 1310px) {
-
-  
-  .ellipse {
-    width: 2000px;
-    height: 200px;
-    filter: blur(130px);
-  }
-  .ellipse-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-30%, -60%) rotate(235.37deg);
-  }
-  .ellipse-left {
-    left: -200px;
-    top: 40%;
-    transform: translate(-30%, -60%) rotate(235.37deg);
-  }
-}
 
 </style>
